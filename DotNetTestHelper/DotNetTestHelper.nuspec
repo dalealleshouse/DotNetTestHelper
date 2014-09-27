@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>$author$</authors>
+    <owners>$author$</owners>
+    <licenseUrl>https://github.com/dalealleshouse/DotNetTestHelper/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/dalealleshouse/DotNetTestHelper</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>$description$</description>
+    <releaseNotes>Project creation</releaseNotes>
+    <copyright>Copyright 2014</copyright>
+    <tags>.net testing mock</tags>
+  </metadata>
+</package>
