@@ -10,8 +10,8 @@
     <projectUrl>https://github.com/dalealleshouse/DotNetTestHelper</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
-    <releaseNotes>Project creation</releaseNotes>
+    <releaseNotes>Added fakes for Entity Framework DbSet</releaseNotes>
     <copyright>Copyright 2014</copyright>
-    <tags>.net testing mock</tags>
+    <tags>.net testing mock EntityFramework Entity Framework</tags>
   </metadata>
 </package>
