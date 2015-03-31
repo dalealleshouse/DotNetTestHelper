@@ -63,14 +63,14 @@ namespace DotNetTestHelper
         {
             var type = typeof(T);
 
-            var constructors = type.GetConstructors();
+            // This should get the constructor with the most parameters in case the client is employing "poor man's dependency injection"
+            var constructor = type.GetConstructors().OrderByDescending(c => c.GetParameters().Count()).FirstOrDefault();
 
-            if (constructors.Count() != 1)
+            if (constructor == null)
             {
-                throw new InvalidOperationException("Unable to construct a type with multiple or no constructors.");
+                throw new InvalidOperationException("Unable to construct a type with no constructors.");
             }
 
-            var constructor = constructors.First();
             var conParams = constructor.GetParameters();
 
             if (conParams.Any(p => !p.ParameterType.IsInterface))

@@ -10,25 +10,29 @@ namespace DotNetTestHelper.Tests.SutBuilder
 {
     using System;
 
+    using AssertExLib;
+
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
     [TestClass]
     public class SutBuilderShould
     {
-        [ExpectedException(typeof(InvalidOperationException))]
         [TestMethod]
         public void ThrowIfAnyConstructorArgumentIsNotAnInterface()
         {
             var sut = new SutBuilder<TestTypeWithNonInterfaceArgument>();
-            sut.Build();
+            AssertEx.Throws<InvalidOperationException>(() => sut.Build());
         }
 
-        [ExpectedException(typeof(InvalidOperationException))]
         [TestMethod]
-        public void ThrowIfMultipleConstructor()
+        public void UseConstructorWithMostArguments()
         {
-            var sut = new SutBuilder<TestTypeWithMultipleConstructors>();
-            sut.Build();
+            var expected = new TestDependency { Identifier = "this is the one" };
+
+            var sut = new SutBuilder<TestSut>().AddDependency(expected).Build();
+            var result = sut.Dependency;
+
+            Assert.AreEqual(expected.Identifier, result.Identifier);
         }
 
         [TestMethod]
