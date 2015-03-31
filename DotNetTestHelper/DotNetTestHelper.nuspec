@@ -10,8 +10,8 @@
     <projectUrl>https://github.com/dalealleshouse/DotNetTestHelper</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
-    <releaseNotes>Added fakes for Entity Framework DbSet</releaseNotes>
-    <copyright>Copyright 2014</copyright>
+    <releaseNotes>Updated SutBuilder to be able to build SUTs with multiple constructors</releaseNotes>
+    <copyright>Copyright 2015</copyright>
     <tags>.net testing mock EntityFramework Entity Framework</tags>
   </metadata>
 </package>
