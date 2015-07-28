@@ -35,7 +35,7 @@ namespace DotNetTestHelper
             var parameters = typeParams as ParameterInfo[] ?? typeParams.ToArray();
             if (typeParams == null || !parameters.Any())
             {
-                throw new InvalidOperationException("Unable to find a constructor argument of the specified type");
+                throw new InvalidOperationException("Unable to find a constructor argument of the specified type: " + dependency);
             }
 
             if (parameters.Count() > 1)
